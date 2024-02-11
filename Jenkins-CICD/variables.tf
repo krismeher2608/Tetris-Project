@@ -17,13 +17,13 @@ variable "ami_id" {
 variable "bucket_name" {
   description = "The name of the S3 bucket to create"
   type        = string
-  default     = "purplehaze777"
+  default     = "tetris-krishnameher"
 }
 
 variable "dynamodb_table" {
   description = "The name of the dynamodb table"
   type        = string
-  default     = "purplehaze777-dynamodb-table"
+  default     = "tetris-krishnameher-dynamodb-table"
 }
 
 variable "acl" {
