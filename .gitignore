@@ -112,3 +112,9 @@ dist
 
 #Mac
 .DS_Store
+#ssh-key folder
+ssh-Key/
+
+#Terraform-files
+.terraform/
+.terraform.lock.hcl
