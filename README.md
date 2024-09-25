@@ -6,8 +6,10 @@ Tetris game built with React
   <img alt="React tetris " title="#React tetris desktop" src="./images/game.jpg" />
 </h1>
 
+I am fine how are you
 
-Use Sonarqube block 
+Use Sonarqube block
+
 ```
 environment {
         SCANNER_HOME=tool 'sonar-scanner'
@@ -21,9 +23,10 @@ stage("Sonarqube Analysis "){
                 }
             }
         }
-```        
+```
 
 Owasp block
+
 ```
 stage('OWASP FS SCAN') {
             steps {
@@ -34,9 +37,11 @@ stage('OWASP FS SCAN') {
 ```
 
 # ARGO CD SETUP
+
 https://archive.eksworkshop.com/intermediate/290_argocd/install/
 
 # Image updater stage
+
 ```
  environment {
     GIT_REPO_NAME = "Tetris-Project"
@@ -61,7 +66,7 @@ https://archive.eksworkshop.com/intermediate/290_argocd/install/
                         sh 'git add deployment-service.yml'
                         sh "git commit -m 'Update deployment image to $NEW_IMAGE_NAME'"
                         sh "git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main"
-                        }   
+                        }
                     }
                 }
             }
