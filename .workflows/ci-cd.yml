@@ -16,7 +16,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        ref: ${{ github.event.inputs.branch_name }} # Checkout the branch specified in the input
+        ref: ${{ github.event.inputs.branch_name }} # Checkoubght the branch specified in the input
 
     # Step 2: Print the branch name and the actor who triggered the workflow
     - name: Display branch and actor info
