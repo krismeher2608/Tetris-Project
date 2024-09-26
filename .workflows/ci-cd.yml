@@ -1,7 +1,12 @@
 name: Manual Trigger Workflow
 
 # This workflow will be triggered manually
-on: workflow_dispatch
+on:
+  push:
+    branches:
+    - 'feature/*'
+  workflow_dispatch:
+    inputs:
 
 jobs:
   run-feature-branch:
