@@ -16,7 +16,7 @@ jobs:
     steps:
     # Step 1: Checkout the code from the provided branch
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         ref: ${{ github.event.inputs.branch_name }} # Checkout the branch specified in the input
 
