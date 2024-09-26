@@ -1,1 +1,33 @@
-wor
+name: Manual Trigger Workflow
+
+# This workflow will be triggered manually
+on:
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'Branch to run the workflow for'
+        required: true
+        default: 'feature/'
+
+jobs:
+  run-feature-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the code from the provided branch
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.inputs.branch_name }} # Checkout the branch specified in the input
+
+    # Step 2: Print the branch name and the actor who triggered the workflow
+    - name: Display branch and actor info
+      run: |
+        echo "Workflow triggered for branch: ${{ github.event.inputs.branch_name }}"
+        echo "Triggered by: ${{ github.actor }}"
+
+    # Step 3: Run any custom script or job
+    - name: Run a sample job
+      run: |
+        echo "Running some tests or build process..."
+        # You can add your build, test, or deployment commands here
