@@ -6,7 +6,6 @@ on:
     branches:
     - 'feature/*'
   workflow_dispatch:
-    inputs:
 
 jobs:
   run-feature-branch:
