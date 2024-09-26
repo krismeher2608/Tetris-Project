@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code from the provided branch
+    # Step 1: Checkout the code from the provided branch..
     - name: Checkout code
       uses: actions/checkout@v4
       with:
