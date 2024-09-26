@@ -7,14 +7,14 @@ on:
       branch_name:
         description: 'Branch to run the workflow for'
         required: true
-        default: 'feature/'
+        default: 'main'
 
 jobs:
   run-feature-branch:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code from the provided branch
+    # Step 1: Checkout the code from the provided branch..
     - name: Checkout code
       uses: actions/checkout@v4
       with:
