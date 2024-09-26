@@ -1,13 +1,7 @@
 name: Manual Trigger Workflow
 
 # This workflow will be triggered manually
-on:
-  workflow_dispatch:
-    inputs:
-      branch_name:
-        description: 'Branch to run the workflow for'
-        required: true
-        default: 'main'
+on: workflow_dispatch
 
 jobs:
   run-feature-branch:
